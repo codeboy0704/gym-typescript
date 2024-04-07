@@ -25,6 +25,8 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  console.log(isTopOfPage)
+
   return (
     <div className='app bg-gray-20'>
       <Navbar
