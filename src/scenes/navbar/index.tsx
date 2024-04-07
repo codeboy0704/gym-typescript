@@ -21,7 +21,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 right-2 w-full py-4`}
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-4`}
       >
         <div className={`${flexBetween} px-[20px] w-[100%]`}>
           <div className={`${flexBetween} w-full gap-16`}>
@@ -74,16 +74,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed flex flex-col align-center right-0 sm:right-1 bottom-0 z-40 h-full w-[100%] sm:w-[300px] bg-primary-100 drop-shadow-xl">
+        <div className="fixed flex flex-col align-center right-[5px] sm:right-1 bottom-0 z-40 h-full w-[210px] sm:w-[300px] bg-primary-100 drop-shadow-xl">
           {/* CLOSE ICON */}
-          <div className="flex justify-end align-center p-12">
+          <div className="flex justify-end align-center p-6">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
               <XMarkIcon className="h-6 w-6 text-gray-400" />
             </button>
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[3%] w-[100%] md-[5%] flex flex-col text-center gap-10 text-2xl">
+          <div className="ml-[3%] w-[100%] md-[5%] flex flex-col text-center justify-center my-auto gap-10 text-2xl">
             <Link
               page="Home"
               selectedPage={selectedPage}
