@@ -16,7 +16,7 @@ type Props = {
           <p className="text-xl">{name}</p>
           <p className="mt-2">{description}</p>
         </div>
-        <img className="w-[100%]  h-auto" alt={`${image}`} src={image} />
+        <img className="w-[100%] rounded h-auto" alt={`${image}`} src={image} />
       </li>
     );
   };
