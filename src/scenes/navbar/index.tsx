@@ -16,7 +16,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 pt-[35px] drop-shadow";
+  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 pt-[30px] drop-shadow";
 
   return (
     <nav>
@@ -24,7 +24,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         className={`${navbarBackground} ${flexBetween} bg-primary-100 fixed right-1 w-full z-30 py-3`}
       >
         <div className={`${flexBetween} px-[20px] w-full`}>
-          <div className={`${flexBetween} w-full gap-16`}>
+          <div className={`${flexBetween} w-full gap-16 mt-[10px]`}>
             {/* LEFT SIDE */}
             <img alt="logo" src={Logo} />
 
@@ -62,7 +62,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               </div>
             ) : (
               <button
-                className="rounded-full bg-secondary-500 p-2"
+                className="rounded-full bg-secondary-500 p-2 mt-[10px]"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
